@@ -15,6 +15,9 @@ import com.sun.research.ws.wadl.Representation;
 @RestController
 public class RestWebSvsExample {
 
+	
+	
+	
 	@RequestMapping(value="/message", method=RequestMethod.GET)
 	public String getSimpleMessage(@RequestParam HashMap<String, String> reqParams) throws Exception{
 		
@@ -42,6 +45,9 @@ public class RestWebSvsExample {
 		productList.add(product1);
 		
 		productList.add(product2);
+		
+		if(productList != null)
+			throw new IllegalArgumentException("dsafsd");
 		
 		return productList;
 		
